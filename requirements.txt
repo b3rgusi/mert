@@ -1,4 +1,4 @@
-﻿altgraph==0.17.4
+altgraph==0.17.4
 attrs==23.2.0
 blinker==1.8.2
 Brotli==1.1.0
@@ -7,7 +7,7 @@ cffi==1.16.0
 charset-normalizer==3.3.2
 click==8.1.7
 colorama==0.4.6
-Flask==3.0.3
+Flask==2.0.3  # Burada sadece bir sürüm bırakmalısınız
 h11==0.14.0
 idna==3.7
 itsdangerous==2.2.0
@@ -48,7 +48,5 @@ urllib3==2.2.1
 websockets==13.1
 Werkzeug==3.0.4
 wsproto==1.2.0
-yt-dlp==2024.9.27
-Flask==2.0.3
-yt-dlp==0.18.4
+yt-dlp==2024.9.27  # Burada da sadece bir sürüm bırakmalısınız
 gunicorn==20.1.0
