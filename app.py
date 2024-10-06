@@ -21,7 +21,7 @@ def get_available_formats(url):
             available_formats = [
                 f"{fmt['ext']} - {fmt.get('height', 'Audio')}" for fmt in formats if fmt.get('height') is not None
             ]
-            available_formats.append("mp3 - En Yüksek Kalite")  # Add audio option
+            available_formats.append("mp3 - En Yüksek Kalite")  # Ses seçeneğini ekle
             return available_formats
     except Exception as e:
         return []
@@ -48,8 +48,8 @@ def download_video(url, format_choice, folder_path):
         ydl.download([url])
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+    return render_template('index.html')  # Ana sayfa olarak index.html'i render et
 
 @app.route('/formats', methods=['POST'])
 def formats():
@@ -73,4 +73,4 @@ def download():
     return jsonify({'message': 'İndirme Başladı'})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)  # Ana sayfa için uygun host ve port ayarları
